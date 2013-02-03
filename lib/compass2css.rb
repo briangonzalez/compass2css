@@ -44,9 +44,9 @@ module Compass2CSS
       string << "$experimental-support-for-mozilla : true;"
       string << "$experimental-support-for-webkit : true;"
       string << "$support-for-original-webkit-gradients : true;"
-      string << "$experimental-support-for-opera : true;"
+      string << "$experimental-support-for-opera : false;"
       string << "$experimental-support-for-microsoft : true;"
-      string << "$experimental-support-for-khtml : true;"
+      string << "$experimental-support-for-khtml : false;"
       return string
     end
 
