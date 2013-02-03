@@ -1,1 +1,0 @@
-if (console) console.log('Hello from Nesta Boilerplate')

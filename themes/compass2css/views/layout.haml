@@ -2,14 +2,15 @@
 %html{ :lang => "en" }
   %head
     %meta{ :charset => "utf-8" }
-    - if @description
-      %meta{ :name => "description", :content => @description }
-    - if @keywords
-      %meta{ :name => "keywords", :content => @keywords } 
+    %meta{ :name => "description", :content => "Compile Compass into CSS." }
+    %meta{ :name => "keywords", :content => "compass, sass, scss, css" } 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+
     %title= @title
     <!--[if ! lte IE 6]><!-->
-    %link{ :href => "#{url('/nestabp-theme/css/master.css')}", :media => "screen", :rel => "stylesheet"}
-    %link{ :href => "#{url('/nestabp-theme/css/prettify.css')}", :media => "screen", :rel => "stylesheet" }
+    %link{ :href => "#{url('/compass2css/css/master.css')}", :media => "screen", :rel => "stylesheet"}
 
     <!--<![endif]-->
     /[if lte IE 6]
@@ -21,7 +22,9 @@
     = haml :analytics, :layout => false
 
   %body
-    #container
+    #masthead
       = haml :header, :layout => false
+
+    #container
       = yield
       = haml :footer, :layout => false

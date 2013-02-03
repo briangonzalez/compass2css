@@ -1,0 +1,44 @@
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 480px) {
+
+  article{ padding-top: 100px;}
+
+  textarea{
+    @include column(12);
+    font-size: 12px;
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
+  #compile-wrap{
+    top: 435px;
+  }
+
+  #masthead header{
+   #logo-heading-wrap{
+     width: 235px;
+
+     h1{ font-size: 23px }
+     img{ height: 95px }
+
+   }
+  }
+
+  #compile-wrap #compile{ font-size: 20px; }
+  #compile-wrap #clear{ top: -50px; left: 9%; }
+  #compile-wrap #about{ top: -20px; left: 9%;}
+
+}
+
+@media only screen and (min-width : 480px) and (max-width : 760px) {
+  #masthead header{
+   #logo-heading-wrap{
+     width: 430px;
+
+     h1{ font-size: 50px }
+     img{ height: 120px }
+
+   }
+  }
+
+}

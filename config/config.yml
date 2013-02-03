@@ -1,8 +1,9 @@
 # Title and subheading for your site. Used on the home page and in page
 # titles.
 #
-title: "Nesta with H5BP, Compass, Semantic GS, & Capistrano"
-subtitle: "alas, a boilerplate for the masses"
+title: "Compile Compass into CSS"
+subtitle: "..."
+description: "test"
 
 # You should really specify your content's author when generating an
 # Atom feed. Specify at least one of name, uri or email, and Nesta will
@@ -19,14 +20,14 @@ author:
 # easy to create or install, and live inside the themes directory. You
 # can also use scripts/theme to install them.
 #
-theme: nestabp-theme
+theme: compass2css
 
 # If you want to use the Disqus service (http://disqus.com) to display
 # comments on your site, register a Disqus account and then specify your
 # site's short name here. A comment form will automatically be added to
 # the bottom of your pages.
 #
-disqus_short_name: briangonzalez
+disqus_short_name:
 
 # cache
 #     Set it to true if you'd like Nesta to cache your pages in ./public.
@@ -52,7 +53,7 @@ content: content
 #     scroll down a bit to set it in production even if you're not deploying
 #     to your own server.
 #
-google_analytics_code: "UA-5991707-6"
+google_analytics_code: "UA-31930831-1"
 
 # Overriding "cache" and "content" in production is recommended if you're
 # deploying Nesta to your own server (but see the deployment documentation
@@ -63,4 +64,4 @@ google_analytics_code: "UA-5991707-6"
 production:
   cache: true
   content: content
-  google_analytics_code: "UA-5991707-6"
+  google_analytics_code: "UA-31930831-1"

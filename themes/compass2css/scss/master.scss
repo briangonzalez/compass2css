@@ -1,0 +1,240 @@
+@charset 'UTF-8';
+
+// Semantic Grid System - http://semantic.gs
+@import "grid";
+
+// Compass imports
+// @import "compass/reset";
+@import "compass/typography";
+@import "compass/utilities";
+@import "compass/css3";
+
+// HTML5 Boilerplate import
+@import "h5bp";
+
+// H5BP includes
+@include h5bp-display;
+@include h5bp-selection;
+@include h5bp-base;
+@include h5bp-links;
+@include h5bp-typography;
+@include h5bp-lists;
+@include h5bp-embeds;
+@include h5bp-figures;
+@include h5bp-forms;
+@include h5bp-tables;
+
+// Semantic Grid Defaults
+$column-width: 60;
+$gutter-width: 20;
+$columns: 12;
+$total-width: 100%;
+
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
+
+
+ // ----------------------------------------------------------------------------------
+ //      ___                                                   ___           ___     
+ //     /\__\                                                 /\__\         /\__\    
+ //    /:/ _/_         ___           ___                     /:/ _/_       /:/ _/_   
+ //   /:/ /\  \       /\__\         /|  |                   /:/ /\__\     /:/ /\  \  
+ //  /:/ /::\  \     /:/  /        |:|  |    ___     ___   /:/ /:/ _/_   /:/ /::\  \ 
+ // /:/_/:/\:\__\   /:/__/         |:|  |   /\  \   /\__\ /:/_/:/ /\__\ /:/_/:/\:\__\
+ // \:\/:/ /:/  /  /::\  \       __|:|__|   \:\  \ /:/  / \:\/:/ /:/  / \:\/:/ /:/  /
+ //  \::/ /:/  /  /:/\:\  \     /::::\  \    \:\  /:/  /   \::/_/:/  /   \::/ /:/  / 
+ //   \/_/:/  /   \/__\:\  \    ~~~~\:\  \    \:\/:/  /     \:\/:/  /     \/_/:/  /  
+ //     /:/  /         \:\__\        \:\__\    \::/  /       \::/  /        /:/  /   
+ //     \/__/           \/__/         \/__/     \/__/         \/__/         \/__/    
+ //
+ // ----------------------------------------------------------------------------------
+ // ----------------------------------------------------------------------------------
+
+@mixin amatic{
+  font-family: 'Amatic SC', cursive;
+}
+
+@mixin container{
+  // max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+body{
+  font-family: Georgia, "Lucida Grande", "Lucida Sans Unicode", helvetica, verdana, arial, times, "Times New Roman", sans-serif;
+  background: white url(/compass2css/img/tex2res5.png);
+  font-size: 12px;
+}
+
+#container{
+  @include container;
+  z-index: 1;
+}
+
+article{ margin: 50px 0; padding-top: 200px; @include clearfix}
+
+h1{ font-size: 40px }
+h1 a { font-size: 32px }
+
+// --------------------------------------------------------------
+
+textarea{
+  @include column(6);
+  margin-bottom: 30px;
+  font-family: courier, sans-serif;
+  font-size: 18px;
+  border: 5px solid #F9F9F9;
+  @include box-shadow(inset 0px 0px 10px #ddd, 0 15px 8px -6px rgba(0,0,0,0.3));
+  @include border-radius(10px);
+  padding: 20px;
+  @include box-sizing(border-box);
+  height: 500px;
+  overflow-y: scroll;
+  resize: none; 
+  outline-width: 0;
+}
+
+textarea:focus {
+    outline: none;
+    @include box-shadow(inset 0px 0px 3px #ddd, 0 10px 8px -6px rgba(0,0,0,0.2));
+}
+
+.error{
+  border-color: #D5675D;
+  @include box-shadow(inset 0px 0px 5px #D5675D);
+}
+
+.warning{
+  border-color: #FEAA57;
+  @include box-shadow(inset 0px 0px 5px #FEAA57);
+}
+
+#masthead{
+  height: 600px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow:  hidden;
+
+  #upper-bar{ position: absolute; width: 100%; height: 100px;  z-index: -1 }
+
+  header{
+    @include container;
+    z-index: 1;
+    @include clearfix;
+    margin-top: 10px;
+
+    #logo-heading-wrap{
+      width: 650px;
+      margin: 0 auto;
+
+      h1{
+        text-align: center;
+        display: inline;
+        @include amatic;
+        font-size: 80px;
+        vertical-align: middle;
+        @include text-shadow( 0px 1px 1px white); 
+      }
+
+      img{ display: inline; margin: 0 10px; }
+    }
+
+  }
+
+
+}
+
+#compile-wrap{
+  width: 100%;
+  position: absolute;
+  top: 685px;
+  left: 0px;
+
+  .middle-button{
+    background: white;
+    display: block;
+    color: #333;
+    font-size: 40px;
+    padding: 10px;
+    text-decoration: none;
+    @include border-radius(6px);
+    @include box-shadow(0 0 20px rgba(0,0,0,0.9));
+    border: 5px solid #eee;
+    font-weight: bold;
+  }
+
+  .middle-button:hover{ @include box-shadow(0 0 15px rgba(0,0,0,0.7)) }
+
+  #compile{
+    margin: 0 auto;
+    width: 180px;
+    position: relative;
+    @include amatic;
+
+    img{ position: absolute; top: 5px; left: 45%; width: 15px; display: none;
+    }
+  }
+
+
+
+}
+
+footer{
+  @include container;
+}
+
+// ----------------------------------------------------------------------
+
+a, a:hover, a:visited{
+  font-size: 12px; color: black;
+  text-decoration: none;
+  border-bottom: 1px dashed #aaa;
+}
+
+// ----------------------------------------------------------------------
+
+@-webkit-keyframes fader {
+    0%  { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+@-webkit-keyframes size {
+  0%   { -webkit-transform: scale(1.2) ; }
+  100% { -webkit-transform: scale(0.2); }
+}
+
+.flying-snippet{
+    color: rgba(0,0,0,0.04);
+    @include amatic;
+    font-size: 60px;
+    font-weight: bold;
+    -webkit-animation: fader 5s infinite, size 10s infinite;
+    z-index: -2 !important;
+}
+
+// --------------------------------------------------------------------------
+
+::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment  {
+  height: 8px;
+  background-color: white;
+}
+::-webkit-scrollbar-track-piece  {
+  -webkit-border-radius: 8px;
+  background-color: white;
+}
+::-webkit-scrollbar-thumb:vertical {
+height: 8px;
+background-color: white;
+border: 1px solid #ccc;
+-webkit-border-radius: 8px;
+}
+
+// --------------------------------------------------------------------------
+@import "media";

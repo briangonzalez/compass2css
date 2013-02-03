@@ -24,5 +24,18 @@ module Nesta
       cache sass(params[:sheet].to_sym, Compass.sass_engine_options)
     end
 
+    get '/favicon.ico' do
+      # favicon hack
+      redirect '/compass2css/favicon.ico'
+    end
+
+    # ---------------------------------------------------------------------------------------------------------------
+
+    post "/compile" do
+      content_type :json
+      output_hash = Compass2CSS.compile :input => params[:input]
+      output_hash.to_json
+    end
+
   end
 end

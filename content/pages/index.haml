@@ -1,1 +1,17 @@
-%section.articles= article_summaries(latest_articles)
+%textarea{ :id => 'scss', :rows => "10", :placeholder => "// Your Compass code" }
+    
+  \//  Your Compass code (scss only)
+  &#013;&#010;
+
+  \#some-div{
+  \  @include border-radius(10px);
+  \}
+
+%textarea{ :id => 'css', :rows => "10", :cols => '80', :placeholder => "/* CSS */" }
+
+
+#compile-wrap
+
+  %button{ :id => 'compile', :class => 'middle-button' }
+    compile ↝
+    %img{ :src => "compass2css/img/spinner.gif" }

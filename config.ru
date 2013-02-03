@@ -16,7 +16,7 @@ Compass.configure_sass_plugin!
 use Sass::Plugin::Rack  # Sass Middleware
 
 # Nice looking 404s and other messages
-use Rack::ShowStatus
+# use Rack::ShowStatus
 
 # Nice looking errors
 use Rack::ShowExceptions

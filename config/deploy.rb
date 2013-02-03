@@ -2,7 +2,7 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
 set :domain, "briangonzalez.org"
-set :application, "nestabp.briangonzalez.org"
+set :application, "c2c.briangonzalez.org"
 set :deploy_to, "/srv/www/#{application}"
 
 # Set the appropriate role
